@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    
+    /* Inspo Studio Design DNA Tokens */
+    --color-paper: #FBFBF9;
+    --color-paper-subtle: #F4F1EB;
+    --color-paper-card: #FFFFFF;
+    --color-paper-dark: #151412;
+    --color-paper-dark-surface: #1E1D1A;
+    --color-ink: #181816;
+    --color-ink-light: #FBFBF9;
+    --color-muted: #736E66;
+    --color-muted-light: #A39E96;
+    --color-accent: #B37D4E; /* Warm terracotta bronze */
+    --color-accent-soft: #F5EBE1;
+    --color-accent-dark: #8C592E;
+    --color-rule: rgba(24, 24, 22, 0.08);
+    --color-rule-dark: rgba(255, 255, 255, 0.1);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Inspo Editorial Typography & Visual Signatures */
+.editorial-serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.015em;
+}
+
+.font-display {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.text-meta {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+/* Hairline borders from Inspo design system */
+.hairline-b {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--color-rule);
+}
+
+.hairline-all {
+  border: 1px solid var(--color-rule);
+}
+
+.hairline-dark-b {
+  border-bottom: 1px solid var(--color-rule-dark);
+}
+
+/* Atmospheric Gradients */
+.inspo-panel-gradient {
+  background: 
+    radial-gradient(120% 90% at 100% 0%, rgba(179, 125, 78, 0.15), transparent 70%),
+    linear-gradient(180deg, #F5F1EB 0%, #EFECE5 100%);
+}
+
+.inspo-panel-dark {
+  background: 
+    radial-gradient(100% 80% at 0% 0%, rgba(179, 125, 78, 0.18), transparent 60%),
+    linear-gradient(180deg, #1A1917 0%, #121110 100%);
+}
+
+/* Hide scrollbar for filter rows while retaining touch scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
